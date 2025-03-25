@@ -3,7 +3,7 @@ const lamp = document.getElementById('lamp');
 
 // richiamo il bottone
 const button = document.getElementById('button');
-const off = document.querySelectorAll('off');
+const off = document.querySelectorAll('.off');
 
 
 // al click del bottone succede
@@ -15,7 +15,9 @@ button.addEventListener('click', () => {
         lamp.src = './img/yellow_lamp.png' 
         // bonus
         button.textContent = 'SPEGNI';
+        document.body.style.backgroundColor = "white";
     }
+
     // altrimenti diventano ON
     else{
         lamp.classList.remove('on');
@@ -23,6 +25,7 @@ button.addEventListener('click', () => {
         lamp.src = './img/white_lamp.png';
         // bonus
         button.textContent = 'ACCENDI';
+        document.body.style.backgroundColor = "black";
     }
 })
 
